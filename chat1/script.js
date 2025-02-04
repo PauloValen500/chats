@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const appUser = "Paulo"; // Cambia a "Chat1" en la otra app
 
     function loadMessages() {
-        fetch("http://localhost:8012/chat1/api.php")
+        fetch("http://localhost:8012/tarea1/chat1/api.php")
             .then(response => response.json())
             .then(data => {
                 messagesContainer.innerHTML = "";
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const messageText = input.value.trim();
 
         if (messageText) {
-            fetch("http://localhost:8012/chat1/api.php", {
+            fetch("http://localhost:8012/tarea1/chat1/api.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ user: appUser, message: messageText })
